@@ -292,10 +292,10 @@ select {
     }
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width:1800px) {
     .imgRight {
         width: 80%;
         min-width: 500px;
-        margin-top: 80px;
+        margin-top: 90px;
     }
 }
