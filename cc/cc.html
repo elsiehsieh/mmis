@@ -4,19 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>氣變情境說明</title>
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="cc.css">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa "
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
 </head>
 
 <body data-spy="scroll" data-target="#myScrollspy">
@@ -67,7 +65,8 @@
             <div class="sdw-div" style="white-space:nowrap; display:inline">
                 <label for="sdw">基期與世紀末Top Event</label>
                 <div class="selectMenu">
-                    <select id="eventSelect" style="display:inline">
+                    <select class="selectpicker" id="eventSelect" style="display:inline">
+
                         <option selected="selected" value="197903">1979年03月</option>
                         <option value="198602">1986年02月</option>
                         <option value="198603">1986年03月</option>
@@ -78,9 +77,9 @@
             </div>
 
             <div class="sdw-div" style="white-space:nowrap; display:inline">
-                <label for="sdw ">結果展示</label>
+                <label for="sdw">結果展示</label>
                 <div class="selectMenu">
-                    <select id="displayTypeSelect" style="display:inline">
+                    <select class="selectpicker" id="displayTypeSelect" style="display:inline">
                         <option selected="selected" value="ty">颱風路徑</option>
                         <option value="ra">累積時雨量</option>
                     </select>
@@ -91,7 +90,7 @@
     </header>
 
     <div class="imgSection">
-        <div class="row ">
+        <div class="row">
             <div class="col-md-6">
                 <img name="imgLeft" class="imgLeft" src="baseline/199702ty.gif"></img>
             </div>
@@ -100,16 +99,6 @@
             </div>
         </div>
     </div>
-
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- Latest compiled and minified JavaScript -->
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa "
-        crossorigin="anonymous"></script>
     <script type="text/javascript" src="cc.js"></script>
 
 </body>
