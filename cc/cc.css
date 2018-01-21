@@ -280,3 +280,14 @@ select {
         height: 100px;
     }
 }
+
+@media screen and (max-width:995px) {
+    .imgRight {
+        width: 80%;
+        min-width: 500px;
+        /* margin-top: 58px;
+        margin-left: 120px; */
+        display: block;
+        margin: auto;
+    }
+}
