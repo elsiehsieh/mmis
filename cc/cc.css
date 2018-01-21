@@ -291,3 +291,11 @@ select {
         margin: auto;
     }
 }
+
+@media screen and (min-width:1000px) {
+    .imgRight {
+        width: 80%;
+        min-width: 500px;
+        margin-top: 80px;
+    }
+}
