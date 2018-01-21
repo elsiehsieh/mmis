@@ -67,7 +67,7 @@
             <div class="sdw-div" style="white-space:nowrap; display:inline">
                 <label for="sdw">基期與世紀末Top Event</label>
                 <div class="selectMenu">
-                    <select id="sdw" name="sdw" style="display:inline">
+                    <select id="eventSelect" style="display:inline">
                         <option selected="selected" value="197903">1979年03月</option>
                         <option value="198602">1986年02月</option>
                         <option value="198603">1986年03月</option>
@@ -80,23 +80,23 @@
             <div class="sdw-div" style="white-space:nowrap; display:inline">
                 <label for="sdw ">結果展示</label>
                 <div class="selectMenu">
-                    <select id="sdw" name="sdw" style="display:inline">
+                    <select id="displayTypeSelect" style="display:inline">
                         <option selected="selected" value="ty">颱風路徑</option>
                         <option value="ra">累積時雨量</option>
                     </select>
                 </div>
             </div>
-            <button type="button" class="btn btn-secondary" id="submitBtn">查詢</button>
+            <!-- <button type="button" class="btn btn-secondary" id="submitBtn">查詢</button> -->
         </div>
     </header>
 
     <div class="imgSection">
         <div class="row ">
             <div class="col-md-6">
-                <img class="imgLeft" src="https://ncdrmmis.azurewebsites.net/cc/img/199702/199702ty.gif "></img>
+                <img name="imgLeft" class="imgLeft" src="baseline/199702ty.gif"></img>
             </div>
             <div class="col-md-6">
-                <img class="imgRight" src="https://ncdrmmis.azurewebsites.net/cc/img/199702/T2WMRI_SPA_m00_TCevent_199702_totalrain.png"></img>
+                <img name="imgRight" class="imgRight" src="baseline/199702_totalrain.png"></img>
             </div>
         </div>
     </div>
