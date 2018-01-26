@@ -9,7 +9,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="slope.css">
+    <link rel="stylesheet" href="water.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa "
         crossorigin="anonymous"></script>
@@ -63,50 +63,56 @@
     <header>
         <div class="container">
             <div class="sdw-div" style="white-space:nowrap; display:inline">
-                <label for="sdw">基期與世紀末比較</label>
+                <label for="sdw">用水分析目標年度(基期為105年)</label>
                 <div class="selectMenu">
-                    <select class="selectpicker" id="eventSelect" style="display:inline">
-
-                        <option selected="selected" value="99.5">99.5</option>
-                        <option value="99.0">99.0</option>
-                        <!-- <option value="198603">198603</option>
-                        <option value="198902">198902</option>
-                        <option value="199702">199702</option> -->
+                    <select class="selectpicker" id="selectYear" style="display:inline">
+                        <option selected="selected" value="Year120">民國120年</option>
+                        <option value="Year115">民國115年</option>
                     </select>
                 </div>
             </div>
-
+            <div class="sdw-div" style="white-space:nowrap; display:inline">
+                <label for="sdw">雨量資料</label>
+                <div class="selectMenu">
+                    <select class="selectpicker" id="selectRain" style="display:inline">
+                        <option selected="selected" value="">統計降尺度</option>
+                        <option value="">動力降尺度(HiRAM)</option>
+                    </select>
+                </div>
+            </div>
             <div class="sdw-div" style="white-space:nowrap; display:inline">
                 <label for="sdw">結果展示</label>
                 <div class="selectMenu">
-                    <select class="selectpicker" id="displayTypeSelect" style="display:inline">
-                        <option selected="selected" value="rain">雨量變化</option>
-                        <option value="settle">聚落危害</option>
-                        <option value="park">避難公園</option>
-                        <option value="reservoir">水庫危害</option>
-                        <option value="tower">高壓電塔</option>
+                    <select class="selectpicker" id="selectDisplay" style="display:inline">
+                        <option selected="selected" value="">未來降雨變化</option>
+                        <option value="">公共用水</option>
+                        <option value="">農業用水</option>
                     </select>
                 </div>
             </div>
-            <!-- <button type="button" class="btn btn-secondary" id="submitBtn">查詢</button> -->
+            <div class="sdw-div" style="white-space:nowrap; display:inline">
+                <label for="sdw">灌區選擇</label>
+                <div class="selectMenu">
+                    <select class="selectpicker" id="selectLocation" style="display:inline">
+                        <option selected="selected" value="">桃園灌區</option>
+                        <option value="">石門灌區</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </header>
 
     <div class="imgSection">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="col-center">
-                    <img name="imgLeft" class="imgLeft" src="199702_totalrain.png"></img>
+                    <img src="199702_totalrain.png"></img>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="col-center">
-                    <img name="imgRight" class="imgRight" src="199702_totalrain.png"></img>
-                </div>
-            </div>
+
         </div>
     </div>
-    <script type="text/javascript" src="slope.js"></script>
+    <script type="text/javascript" src="water.js"></script>
 
 </body>
 
