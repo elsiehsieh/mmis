@@ -263,21 +263,7 @@ label[for="sdw"] {
     margin: 58px auto;
 }
 
-@media screen and (max-width:995px) {
-    .imgRight {
-        width: 80%;
-        min-width: 500px;
-        margin-top: 58px;
-        /* margin-left: 120px; */
-        display: block;
-        margin: auto;
-    }
-}
-
-@media screen and (min-width:1800px) {
-    .imgRight,
-    .imgLeft {
-        width: 80%;
-        min-width: 500px;
-    }
+.col-center img {
+    min-width: 450px;
+    width: 100%;
 }

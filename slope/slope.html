@@ -80,28 +80,46 @@
                 <label for="sdw">結果展示</label>
                 <div class="selectMenu">
                     <select class="selectpicker" id="displayTypeSelect" style="display:inline">
-                        <option selected="selected" value="rain">雨量變化</option>
-                        <option value="settle">聚落危害</option>
-                        <option value="park">避難公園</option>
-                        <option value="reservoir">水庫危害</option>
-                        <option value="tower">高壓電塔</option>
+                        <option selected="selected" value="settle">聚落危害</option>
+                        <option value="traffic">交通危害</option>
+                        <option value="facility">關鍵設施</option>
+                        <option value="forestry">林業危害</option>
+                        <option value="agriculture">農業危害</option>
+                        <option value="water">水利設施</option>
+                        <option value="other">其他類別</option>
                     </select>
                 </div>
             </div>
-            <!-- <button type="button" class="btn btn-secondary" id="submitBtn">查詢</button> -->
+            <div class="sdw-div facilitySelectDiv" style="white-space:nowrap; display:none">
+                <label for="sdw">關鍵設施</label>
+                <div class="selectMenu">
+                    <select class="selectpicker" id="facilitySelect" style="display:inline">
+                        <option value="park">避難公園</option>
+                        <option value="">派出所</option>
+                        <option value="">消防單位</option>
+                        <option value="">醫院</option>
+                        <option value="">學校</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="sdw-div waterSelectDiv" style="white-space:nowrap; display:none">
+                <label for="sdw">水利設施</label>
+                <div class="selectMenu">
+                    <select class="selectpicker" id="waterSelect" style="display:inline">
+                        <option selected="selected" value="reservoir">水庫</option>
+                        <option value="">水利設備</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </header>
 
     <div class="imgSection">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="col-center">
-                    <img name="imgLeft" class="imgLeft" src="199702_totalrain.png"></img>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="col-center">
-                    <img name="imgRight" class="imgRight" src="199702_totalrain.png"></img>
+                    <img src="img/99.5.png"></img>
                 </div>
             </div>
         </div>

@@ -1,57 +1,31 @@
-// $(function () {
-//     $('#colorselector').change(function () {
-//         $('.colors').hide();
-//         $('#' + $(this).val()).show();
-//     });
-// });
+$(document).ready(function () {
+    $("#eventSelect").change(function () {
+        $("img").attr("src", "img/" + $("#eventSelect").val() + ".png");
+    });
+});
 $(document).ready(function () {
     $("#displayTypeSelect").change(function () {
-        $("img[class=imgLeft]").attr("src", "baseline/" + $("#eventSelect").val() + $("#displayTypeSelect").val() + ".gif");
+        if ($(this).val() == "facility") {
+            $(".facilitySelectDiv").css("display", "inline");
+            $(".waterSelectDiv").css("display", "none");
+            $("img").attr("src", "img/" + $("#facilitySelect").val() + ".png");
+        } else if ($(this).val() == "water") {
+            $(".facilitySelectDiv").css("display", "none");
+            $(".waterSelectDiv").css("display", "inline");
+            $("img").attr("src", "img/" + $("#waterSelect").val() + ".png");
+        } else {
+            $(".facilitySelectDiv").css("display", "none");
+            $(".waterSelectDiv").css("display", "none");
+        }
     });
 });
 $(document).ready(function () {
-    $("#eventSelect").change(function () {
-        $("img[class=imgLeft]").attr("src", "baseline/" + $("#eventSelect").val() + $("#displayTypeSelect").val() + ".gif");
+    $("#facilitySelect").change(function () {
+        $("img").attr("src", "img/" + $("#facilitySelect").val() + ".png");
     });
 });
 $(document).ready(function () {
-    $("#eventSelect").change(function () {
-        $("img[class=imgRight]").attr("src", "baseline/" + $("#eventSelect").val() + "_totalrain.png");
+    $("#waterSelect").change(function () {
+        $("img").attr("src", "img/" + $("#waterSelect").val() + ".png");
     });
 });
-//  $(document).ready(function () {
-//      $(document).on("scroll", onScroll);
-//      //smoothscroll
-//      $('.navbar-nav li a[href^="#"]').on('click', function (e) {
-//          e.preventDefault();
-//          $(document).off("scroll");
-//          $('.navbar-nav li a').each(function () {
-//              $(this).removeClass('active');
-//          })
-//          $(this).addClass('active');
-//          var target = this.hash,
-//              menu = target;
-//          target = $(target);
-//          $('html, body').stop().animate({
-//              'scrollTop': target.offset().top + 2
-//          }, 1000, 'swing', function () {
-//              window.location.hash = target;
-//              $(document).on("scroll", onScroll);
-//          });
-//      });
-//  });
-
-// function onScroll(event) {
-//     var scrollPos = $(document).scrollTop();
-//     $('.navbar-nav li a').each(function () {
-//         var currLink = $(this);
-//         var refElement = $(currLink.attr("href"));
-//         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-//             $('.navbar-nav li a').removeClass("active");
-//             currLink.addClass("active");
-//         }
-//         else {
-//             currLink.removeClass("active");
-//         }
-//     });
-// }
