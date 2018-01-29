@@ -4,20 +4,25 @@ body {
   font-family: "微軟正黑體";
   height: 100%;
   width: 100%;
+  background-color: #490d40;
+  background: url(http://ncdrmmis.azurewebsites.net/image/home_bg.jpg) no-repeat fixed;
+  background-size: cover;
+  margin: 0px;
 }
 
 .image {
-  background-color: #490d40;
+  /* background-color: #490d40;
   background: url(http://ncdrmmis.azurewebsites.net/image/home_bg.jpg) no-repeat center center;
-  background-size: cover;
+  background-size: cover; */
   height: 100%;
   margin-top: 0px;
-  width:100%;
-  magin:0 auto;
+  width: 100%;
+  /* background: rgba(0, 0, 0, 0.5); */
 }
 
 .image .heading {
   color: #000099;
+  /* 000099 */
   font-weight: bold;
   text-align: center;
   font-size: 48px;
@@ -25,19 +30,20 @@ body {
   position: absolute;
   top: 38%;
   width: 100%;
-  margin:0 auto;
+  margin: 0 auto;
 }
-.menuLi{
+
+.menuLi {
   width: 800px;
   margin: 0 auto;
-  
 }
+
 .image ul {
   text-align: center;
   padding: 10px 60px;
   position: absolute;
   top: 65%;
-  background-color: rgba(0, 0, 0, 0.7);  
+  background-color: rgba(0, 0, 0, 0.7);
   /*background-color: rgba(35, 62, 71, 0.9);*/
 }
 
@@ -63,8 +69,8 @@ body {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  margin-left:10px;
-  margin-right:10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .image ul li .iconText {
@@ -75,7 +81,7 @@ body {
   height: 80px;
   background-color: transparent;
   border: none;
-  color: white;
+  color: #000099;
   z-index: 100;
   -webkit-transition: background-color 1s ease 0s;
   transition: background-color 1s ease 0s;
@@ -92,7 +98,7 @@ body {
 }
 
 .navbar-default .navbar-nav>li>a {
-  color: #000099;
+  color: white;
   margin: 10px 5px 5px 5px;
 }
 
@@ -104,7 +110,7 @@ body {
 }
 
 .navbar-default .navbar-nav>li>a:visited {
-  color: #000099;
+  color: white;
   text-decoration: none;
 }
 
@@ -116,7 +122,7 @@ body {
 }
 
 .navbar-default .navbar-toggle {
-  border-color: #000099;
+  border-color: #ffffff;
 }
 
 .navbar-default .navbar-toggle:hover,
@@ -126,13 +132,12 @@ body {
 
 .navbar-default .navbar-toggle .icon-bar {
   color: white;
-  background-color: #000099;
+  background-color: #ffffff;
 }
 
 .navbar-default .navbar-collapse.collapse.in ul {
   background-color: #000000;
 }
-
 
 /* Solid class attached on scroll past first section */
 
@@ -157,8 +162,8 @@ body {
 }
 
 .about {
-  background-color: rgba(35, 62, 71, 0.3);
-  color: #490d40;
+  background-color: rgb(223, 223, 223);
+  color: #5c5c5c;
   height: 100%;
   text-align: center;
   margin-top: -20px;
@@ -173,27 +178,27 @@ body {
 }
 
 @media only screen and (min-width: 1300px) {
-.image ul .btn>img {
-  width: 80px;
-  height: 80px;
-  border-radius: 10%;
-}
-.iconText{
-  font-size:20px;
-}
-.menuLi{
-  width: 1000px;
-  margin: 0 auto;
-}
-.image .heading {
-  color: #000099;
-  font-weight: bold;
-  text-align: center;
-  font-size: 56px;
-  letter-spacing: 4px;
-  position: absolute;
-  top: 38%;
-  width: 100%;
-  margin:0 auto;
-}
+  .image ul .btn>img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10%;
+  }
+  .iconText {
+    font-size: 20px;
+  }
+  .menuLi {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .image .heading {
+    color: #000099;
+    font-weight: bold;
+    text-align: center;
+    font-size: 56px;
+    letter-spacing: 4px;
+    position: absolute;
+    top: 38%;
+    width: 100%;
+    margin: 0 auto;
+  }
 }

@@ -1,5 +1,6 @@
 body {
     background: #F0F0F0;
+    /* #F0F0F0 */
     color: #414141;
     font-size: 16px;
     overflow-x: hidden;
@@ -65,7 +66,6 @@ body {
     font-family: "微軟正黑體" !important;
 }
 
-
 /**** NAV ****/
 
 nav.navbar-default {
@@ -99,6 +99,8 @@ nav.navbar-default .navbar-brand:hover {
     background-color: transparent;
 }
 
+/* navbar字體顏色 */
+
 nav.navbar-default .navbar-nav>li>a {
     color: #fff;
     font-size: 16px;
@@ -107,7 +109,8 @@ nav.navbar-default .navbar-nav>li>a {
 
 nav.navbar-default .navbar-nav>li>a:focus,
 nav.navbar-default .navbar-nav>li>a:hover {
-    color: #F05F40;
+    color: #abbaab;
+    /* #F05F40 */
     background-color: transparent;
 }
 
@@ -118,14 +121,12 @@ nav.navbar-default .navbar-nav li a.active:hover {
     background-color: transparent;
 }
 
-
 /**** NAV END ****/
-
 
 /**** HEADER ****/
 
 header {
-    height: 200px;
+    /* height: 200px; */
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -133,11 +134,16 @@ header {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     z-index: 1;
-    margin-top: 50px;
-    /* text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.41); */
-    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #abbaab;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h1,
@@ -146,7 +152,6 @@ h3,
 h4 {
     font-family: "微軟正黑體" !important;
 }
-
 
 /**** HEADER END ****/
 
@@ -162,62 +167,6 @@ h4 {
     margin: 50px 0 0;
 }
 
-
-/* 
-.selectMenu:after {
-    content: '▼';
-    position: absolute;
-    width: 37px;
-    color: #999;
-    font-weight: bold;
-    font-size: 16px;
-    right: 2px;
-    bottom: 8px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.selectMenu:before {
-    content: '';
-    right: 2px;
-    top: 2px;
-    width: 37px;
-    height: 34px;
-    background: #242424;
-    position: absolute;
-    pointer-events: none;
-    display: block;
-    z-index: 1;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-} */
-
-
-/* 
-select {
-    font-size: 22px;
-    position: relative;
-    width: 200px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: #111;
-    color: white;
-    border: none;
-    outline: none;
-    padding: 8px 10px;
-    margin: 0;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    cursor: pointer;
-    height: 38px; 
-}*/
-
 label[for="sdw"] {
     font-size: 20px;
 }
@@ -227,28 +176,27 @@ label[for="sdw"] {
     margin-left: 40px;
 }
 
-.imgLeft {
-    width: 100%;
-    min-width: 500px;
-}
-
-.imgRight {
-    width: 80%;
-    min-width: 450px;
-    margin-top: 58px;
-}
-
 .imgSection {
-    width: 100%;
     height: 800px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    margin: auto;
+    max-width: 1200px;
 }
 
-@media screen and (min-width:800px)and (max-width:1300px) {
+.col-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.col-center img {
+    min-width: 450px;
+    width: 100%;
+}
+
+/* @media screen and (min-width:800px)and (max-width:1300px) {
     header {
-        height: 100px;
+        height: 180px;
     }
 }
 
@@ -256,9 +204,9 @@ label[for="sdw"] {
     header {
         height: 200px;
     }
-}
+} */
 
-@media screen and (min-width:2000px) {
+/* @media screen and (min-width:2000px) {
     header {
         height: 200px;
     }
@@ -268,23 +216,23 @@ label[for="sdw"] {
     header {
         height: 100px;
     }
-}
+} */
 
 @media screen and (max-width:995px) {
     .imgRight {
         width: 80%;
         min-width: 500px;
-        /* margin-top: 58px;
-        margin-left: 120px; */
+        margin-top: 58px;
+        /* margin-left: 120px; */
         display: block;
         margin: auto;
     }
 }
 
 @media screen and (min-width:1800px) {
-    .imgRight {
+    .imgRight,
+    .imgLeft {
         width: 80%;
         min-width: 500px;
-        margin-top: 90px;
     }
 }

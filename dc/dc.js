@@ -6,7 +6,7 @@
 // });
 $(document).ready(function () {
     $("#eventSelect").change(function () {
-        $("img[class=imgLeft]").attr("src",$("#eventSelect").val());
+        $("img[class=col-center]").attr("src",$("#eventSelect").val());
     });
     
    
