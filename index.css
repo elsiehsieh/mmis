@@ -21,16 +21,16 @@ body {
 }
 
 .heading {
-  color: #292E49;
-  /* 000099 */
   font-weight: bold;
+  color: #191970;
   text-align: center;
-  font-size: 48px;
+  font-size: 50px;
   letter-spacing: 4px;
   position: absolute;
   top: 38%;
   width: 100%;
   margin: 0 auto;
+  font-family: Helvetica;
 }
 
 .menuLi {
@@ -197,7 +197,7 @@ body {
     margin: 0 auto;
   }
   .image .heading {
-    color: rgb(0, 0, 0);
+    color: #191970;
     font-weight: bold;
     text-align: center;
     font-size: 56px;
@@ -206,5 +206,6 @@ body {
     top: 38%;
     width: 100%;
     margin: 0 auto;
+    font-family: Helvetica;
   }
 }
