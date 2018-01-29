@@ -5,11 +5,26 @@
 //     });
 // });
 $(document).ready(function () {
-    $("#selectDisplay").change(function () {
-        $("img").attr("src", "img/" + $("#selectDisplay").val() + ".png");
+    $("#eventSelect").change(function () {
+        $("img[class=imgLeft]").attr("src",$("#eventSelect").val());
     });
+    
+   
+    
+// });
+// $(document).ready(function () {
+//     $("#eventSelect").change(function () {
+//         $("img[class=imgLeft]").attr("src", "baseline/" + $("#eventSelect").val() + // $("#displayTypeSelect").val() + ".gif");
+//     });
+// });
+// $(document).ready(function () {
+//     $("#eventSelect").change(function () {
+//         $("img[class=imgRight]").attr("src", "baseline/" + $("#eventSelect").val() + "_totalrain.png");
+//     });
+    
+   
+    
 });
-
 //  $(document).ready(function () {
 //      $(document).on("scroll", onScroll);
 //      //smoothscroll

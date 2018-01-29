@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>坡地災害領域</title>
+    <title>氣變情境說明</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="slope.css">
+    <link rel="stylesheet" href="cc.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa "
         crossorigin="anonymous"></script>
@@ -37,7 +37,7 @@
                         <a href="#">淹水領域</a>
                     </li>
                     <li>
-                        <a href="#">坡災領域</a>
+                        <a href="../slope/slope.html">坡災領域</a>
                     </li>
                     <li>
                         <a href="../water/water.html">水資源領域</a>
@@ -46,7 +46,7 @@
                         <a href="../ag/ag.html">農業領域</a>
                     </li>
                     <li>
-                        <a href="../dc/dc.html">公衛領域</a>
+                        <a href="#">公衛領域</a>
                     </li>
                     <li>
                         <a href="#">跨部門領域</a>
@@ -63,31 +63,37 @@
     <header>
         <div class="container">
             <div class="sdw-div" style="white-space:nowrap; display:inline">
-                <label for="sdw">基期與世紀末比較</label>
+                <label for="sdw">埃及斑蚊分布之調查與未來推估</label>
                 <div class="selectMenu">
                     <select class="selectpicker" id="eventSelect" style="display:inline">
 
-                        <option selected="selected" value="99.5">99.5</option>
-                        <option value="99.0">99.0</option>
-                        <!-- <option value="198603">198603</option>
+                        <option selected="selected" value="pic//p.png">歷史調查</option>
+                        <option value="pic//f1.png">近未來推估</option>
+                        <option value="pic//f2.png">世紀中推估</option>
+                        <option value="pic//f3.png">世紀末推估</option>
+                        <!--   
+                        
                         <option value="198902">198902</option>
-                        <option value="199702">199702</option> -->
+                        <option value="199702">199702</option>
+                        
+                        -->
+
                     </select>
                 </div>
             </div>
 
-            <div class="sdw-div" style="white-space:nowrap; display:inline">
+            <!--        <div class="sdw-div" style="white-space:nowrap; display:inline">
                 <label for="sdw">結果展示</label>
                 <div class="selectMenu">
                     <select class="selectpicker" id="displayTypeSelect" style="display:inline">
-                        <option selected="selected" value="rain">雨量變化</option>
-                        <option value="settle">聚落危害</option>
-                        <option value="park">避難公園</option>
-                        <option value="reservoir">水庫危害</option>
-                        <option value="tower">高壓電塔</option>
+                        <option selected="selected" value="ty">颱風路徑</option>
+                        <option value="ra">累積時雨量</option>
                     </select>
                 </div>
             </div>
+            
+            -->
+
             <!-- <button type="button" class="btn btn-secondary" id="submitBtn">查詢</button> -->
         </div>
     </header>
@@ -95,18 +101,15 @@
     <div class="imgSection">
         <div class="row">
             <div class="col-md-6">
-                <div class="col-center">
-                    <img name="imgLeft" class="imgLeft" src="199702_totalrain.png"></img>
-                </div>
+                <img name="imgLeft" class="imgLeft" src="pic/p.png"></img>
             </div>
-            <div class="col-md-6">
-                <div class="col-center">
-                    <img name="imgRight" class="imgRight" src="199702_totalrain.png"></img>
-                </div>
+            <!--            <div class="col-md-6">
+                <img name="imgRight" class="imgRight" src="baseline/199702_totalrain.png"></img>
             </div>
+            -->
         </div>
     </div>
-    <script type="text/javascript" src="slope.js"></script>
+    <script type="text/javascript" src="dc.js"></script>
 
 </body>
 
