@@ -5,6 +5,7 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
     $("#displayTypeSelect").change(function () {
+        $("img").attr("src", "img/" + $("#displayTypeSelect").val() + ".png");
         if ($(this).val() == "facility") {
             $(".facilitySelectDiv").css("display", "inline");
             $(".waterSelectDiv").css("display", "none");
