@@ -173,7 +173,7 @@ label[for="sdw"] {
 
 .btn {
     margin-bottom: 5px;
-    margin-left: 40px;
+    margin-left: 5px;
 }
 
 .imgSection {
@@ -235,4 +235,10 @@ label[for="sdw"] {
         width: 80%;
         min-width: 500px;
     }
+}
+
+.buttonMenu {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px grey dotted;
 }

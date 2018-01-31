@@ -5,15 +5,15 @@ body {
   height: 100%;
   width: 100%;
   background-color: #490d40;
-  background: url(http://ncdrmmis.azurewebsites.net/image/home_bg.jpg) no-repeat fixed;
-  background-size: cover;
+  /* background: url(http://ncdrmmis.azurewebsites.net/image/home_bg.jpg) no-repeat;
+  background-size: cover; */
   margin: 0px;
 }
 
 .image {
-  /* background-color: #490d40;
+  background-color: #490d40;
   background: url(http://ncdrmmis.azurewebsites.net/image/home_bg.jpg) no-repeat center center;
-  background-size: cover; */
+  background-size: cover;
   height: 100%;
   margin-top: 0px;
   width: 100%;
