@@ -140,11 +140,11 @@ header {
     padding-bottom: 50px;
     /* text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.41); */
     /* text-align: center; */
-    background: #DAD299;
+    background: rgb(160, 230, 248);
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);
+    background: -webkit-linear-gradient(to right, #EAECC6, rgb(160, 230, 248));
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #B0DAB9, #DAD299);
+    background: linear-gradient(to right, #EAECC6, rgb(160, 230, 248));
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
