@@ -158,7 +158,7 @@ h4 {
 .sdw-div {
     white-space: wrap;
     display: inline;
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 .selectMenu {
@@ -190,7 +190,7 @@ label[for="sdw"] {
 }
 
 .col-center img {
-    min-width: 450px;
+    min-width: 300px;
     width: 100%;
 }
 
@@ -218,7 +218,7 @@ label[for="sdw"] {
     }
 } */
 
-@media screen and (max-width:995px) {
+@media screen and (max-width:800px) {
     .imgRight {
         width: 80%;
         min-width: 500px;
