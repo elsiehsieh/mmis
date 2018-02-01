@@ -6,11 +6,20 @@
 // });
 $(document).ready(function () {
     $("#selectDisplay").change(function () {
-        $("img").attr("src", "img/" + $("#selectDisplay").val() + ".mp4");
-        if ($("#selectDisplay").val() != "flood") {
-            $(".buttonMenu").css("display", "block");
-        } else {
+        if ($("#selectDisplay").val() == "flood") {
             $(".buttonMenu").css("display", "none");
+            $(".img").css("display", "none");
+            $(".video").css("display", "block");
+        } else if ($("#selectDisplay").val() == "maximum_depth") {
+            $(".buttonMenu").css("display", "block");
+            $(".img").css("display", "block");
+            // $(".img").attr("src", "img/maximum_depth.png");
+            // $(".video").hide();
+        } else {
+            $(".buttonMenu").css("display", "block");
+            $(".img").css("display", "block");
+            $(".img").attr("src", "img/loss.png");
+            $(".video").css("display", "none");
         }
     });
 });
