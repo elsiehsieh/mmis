@@ -5,21 +5,29 @@
 //     });
 // });
 $(document).ready(function () {
+    $(".buttonMenu").hide();
+    $(".imgSection").hide();
+
     $("#selectDisplay").change(function () {
+        //控制影片/圖片div顯示隱藏
         if ($("#selectDisplay").val() == "flood") {
-            $(".buttonMenu").css("display", "none");
-            $(".img").css("display", "none");
-            $(".video").css("display", "block");
-        } else if ($("#selectDisplay").val() == "maximum_depth") {
-            $(".buttonMenu").css("display", "block");
-            $(".img").css("display", "block");
-            // $(".img").attr("src", "img/maximum_depth.png");
-            // $(".video").hide();
+            $('.videioSection').show();
+            $(".imgSection").hide();
         } else {
-            $(".buttonMenu").css("display", "block");
-            $(".img").css("display", "block");
-            $(".img").attr("src", "img/loss.png");
-            $(".video").css("display", "none");
+            $('.videioSection').hide();
+            $(".imgSection").show();
+        }
+        //控制第二層按鈕表單顯示隱藏
+        if ($("#selectDisplay").val() == "flood") {
+            $(".buttonMenu").hide();
+        } else {
+            $(".buttonMenu").show();
+        }
+        //換圖片
+        if ($("#selectDisplay").val() == "maximum_depth") {
+            $("img").attr("src", "img/maximum_depth.png");
+        } else {
+            $("img").attr("src", "img/loss.png");
         }
     });
 });
