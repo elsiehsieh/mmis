@@ -194,29 +194,9 @@ label[for="sdw"] {
     width: 100%;
 }
 
-/* @media screen and (min-width:800px)and (max-width:1300px) {
-    header {
-        height: 180px;
-    }
+.iconGroup {
+    margin-top: 50px;
 }
-
-@media screen and (max-width:799px) {
-    header {
-        height: 200px;
-    }
-} */
-
-/* @media screen and (min-width:2000px) {
-    header {
-        height: 200px;
-    }
-}
-
-@media screen and (min-width:1301px) {
-    header {
-        height: 100px;
-    }
-} */
 
 @media screen and (max-width:800px) {
     .imgRight {

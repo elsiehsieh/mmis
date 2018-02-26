@@ -2,108 +2,75 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>MMIS</title>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MMIS</title>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-          aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#"></a>
-      </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <!-- <li>
-            <a class="page-scroll" href="#aboutPage">About</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#home-cover">
-              <i class="material-icons">home</i>
-            </a>
-          </li> -->
-          <!--<li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Another Link</a>
-          </li>-->
-        </ul>
-      </div>
-      <!--/.nav-collapse -->
-    </div>
-  </nav>
-
-  <div class="image" id="home-cover">
-    <div class="heading titleStyle">MMIS Services</div>
-    <div class="menuLi">
-      <ul>
-        <li>
-          <button class="btn btn-large" onclick="window.location='cc/cc.html'" title="請點選觀看">
+    <div class="image" id="home-cover">
+        <div class="heading titleStyle">MMIS Services</div>
+        <div class="menuLi">
+            <ul>
+                <li>
+                    <button class="btn btn-large" onclick="window.location='cc/cc.html'" title="請點選觀看">
             <img src="http://ncdrmmis.azurewebsites.net/image/icon/降雨.jpg">
           </button>
-          <div class="iconText">氣變情境</div>
-        </li>
-        <li>
-          <button class="btn btn-large" onclick="window.location='flood/flood.html'" title="請點選觀看">
+                    <div class="iconText">氣變情境</div>
+                </li>
+                <li>
+                    <button class="btn btn-large" onclick="window.location='flood/flood.html'" title="請點選觀看">
             <!-- window.location='flood/flood.html' -->
             <img src="http://ncdrmmis.azurewebsites.net/image/icon/淹水.jpg">
           </button>
-          <div class="iconText">淹水領域</div>
-        </li>
-        <li>
-          <button class="btn btn-large" onclick="window.location='slope/slope.html'" title="請點選觀看">
+                    <div class="iconText">淹水領域</div>
+                </li>
+                <li>
+                    <button class="btn btn-large" onclick="window.location='slope/slope.html'" title="請點選觀看">
             <img src="http://ncdrmmis.azurewebsites.net/image/icon/崩塌.jpg">
           </button>
-          <div class="iconText">坡災領域</div>
-        </li>
-        <li>
-          <button class="btn btn-large" onclick="window.location='water/water.html'" title="請點選觀看">
+                    <div class="iconText">坡災領域</div>
+                </li>
+                <li>
+                    <button class="btn btn-large" onclick="window.location='water/water.html'" title="請點選觀看">
             <img src="http://ncdrmmis.azurewebsites.net/image/icon/water.jpg">
           </button>
-          <div class="iconText">水資源領域</div>
-        </li>
-        <li>
-          <button class="btn btn-large" onclick="window.location='ag/ag.html'" title="請點選觀看">
+                    <div class="iconText">水資源領域</div>
+                </li>
+                <li>
+                    <button class="btn btn-large" onclick="window.location='ag/ag.html'" title="請點選觀看">
             <!-- window.location='agriculture/agriculture.html' -->
             <img src="http://ncdrmmis.azurewebsites.net/image/icon/農業.jpg">
           </button>
-          <div class="iconText">農業領域</div>
-        </li>
-        <li>
-          <button class="btn btn-large" onclick="window.location='dc/dc.html'" title="請點選觀看">
+                    <div class="iconText">農業領域</div>
+                </li>
+                <li>
+                    <button class="btn btn-large" onclick="window.location='dc/dc.html'" title="請點選觀看">
             <!-- window.location='coastal/coastal.html' -->
             <img src="http://ncdrmmis.azurewebsites.net/image/icon/登革熱.jpg">
           </button>
-          <div class="iconText">公衛領域</div>
-        </li>
-        <li>
-          <button class="btn btn-large" onclick="#" title="請點選觀看">
+                    <div class="iconText">公衛領域</div>
+                </li>
+                <li>
+                    <button class="btn btn-large" onclick="#" title="請點選觀看">
             <!-- window.location='cross/cross.html' -->
             <img src="http://ncdrmmis.azurewebsites.net/image/icon/跨部門.jpg">
           </button>
-          <div class="iconText">跨部門模擬</div>
-        </li>
-      </ul>
+                    <div class="iconText">跨部門模擬</div>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
-  <!-- <div class="about" id="aboutPage">
+    <!-- <div class="about" id="aboutPage">
     <h2>Main Description</h2>
     <p>Roll on the floor purring your whiskers off intrigued by the shower burrow under covers, and play time, rub face on everything,
       intently sniff hand, or pelt around the house and up and down stairs chasing phantoms. Attack feet. Damn that dog shake
@@ -111,7 +78,7 @@
       give attitude.</p>
   </div> -->
 
-  <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 
 </body>
 

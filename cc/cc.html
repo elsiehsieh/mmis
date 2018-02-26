@@ -5,21 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>氣變情境說明</title>
-    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="cc.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/utinities.css">
+    <link rel="stylesheet" href="../css/icon-in-pages.css">
+    <link rel="stylesheet" href="cc.css">
 </head>
 
 <body data-spy="scroll" data-target="#myScrollspy">
+
     <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="205">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -63,61 +67,68 @@
         </div>
     </nav>
     <header>
-        <div class="row">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="menuGroup">
+                        <div class="sdw-div">
+                            <label for="eventOptions">基期與世紀末Top Event</label>
+                            <div class="selectMenu">
+                                <select class="selectpicker" id="eventSelect" name="eventOptions">
 
-            <div class="col-md-10 col-sm-12 col-centered">
-                <div class="menuGroup">
-                    <div class="sdw-div">
-                        <label for="eventOptions">基期與世紀末Top Event</label>
-                        <div class="selectMenu">
-                            <select class="selectpicker" id="eventSelect" name="eventOptions">
-
-                                <option selected="selected" value="197903">197903</option>
-                                <option value="198602">198602</option>
-                                <option value="198603">198603</option>
-                                <option value="198902">198902</option>
-                                <option value="199702">199702</option>
-                                <!-- 世紀末 -->
-                                <option value="208303">208303</option>
-                                <option value="208703">208703</option>
-                                <option value="208901">208901</option>
-                                <option value="208902">208902</option>
-                                <option value="209002">209002</option>
-                            </select>
+                                    <option selected="selected" value="197903">197903</option>
+                                    <option value="198602">198602</option>
+                                    <option value="198603">198603</option>
+                                    <option value="198902">198902</option>
+                                    <option value="199702">199702</option>
+                                    <!-- 世紀末 -->
+                                    <option value="208303">208303</option>
+                                    <option value="208703">208703</option>
+                                    <option value="208901">208901</option>
+                                    <option value="208902">208902</option>
+                                    <option value="209002">209002</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="sdw-div">
-                        <label for="resultDisplay">結果展示</label>
-                        <div class="selectMenu">
-                            <select class="selectpicker" id="displayTypeSelect" name="resultDisplay">
-                                <option selected="selected " value="ty">颱風路徑</option>
-                                <option value="ra">累積時雨量</option>
-                            </select>
+                        <div class="sdw-div">
+                            <label for="resultDisplay">結果展示</label>
+                            <div class="selectMenu">
+                                <select class="selectpicker" id="displayTypeSelect" name="resultDisplay">
+                                    <option selected="selected " value="ty">颱風路徑</option>
+                                    <option value="ra">累積時雨量</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-2 col-sm-12 col-centered">
-                <div class="iconGroup">
-                    <img class="icon" src="../image/icon/降雨.JPG" alt="氣變情境icon">
-                    <h4 class="iconText">氣變情境說明</h4>
+                <div class="col-md-2">
+                    <div class="iconGroup">
+                        <img class="icon" src="../image/icon/降雨.JPG" alt="氣變情境icon">
+                        <h4 class="iconText">氣變情境說明</h4>
+                    </div>
                 </div>
             </div>
         </div>
-
     </header>
-
-    <div class="imgSection ">
-        <div class="row ">
-            <div class="col-md-6 ">
-                <img name="imgLeft " class="imgLeft " src="baseline/199702ty.gif "></img>
-            </div>
-            <div class="col-md-6 ">
-                <img name="imgRight " class="imgRight " src="baseline/199702_totalrain.png "></img>
+    <div class="section textframe">
+        <div class="text-bubble">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, ad!Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Impedit commodi dolores incidunt corrupti quisquam odio accusamus, quia deleniti porro dolorem! Lorem,
+            adipisicing elit. Vel, nesciunt.</div>
+    </div>
+    <div class="imgSection">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <img name="imgLeft" class="imgLeft" src="baseline/197903ty.gif"></img>
+                </div>
+                <div class="col-md-6">
+                    <img name="imgRight" class="imgRight" src="baseline/197903_totalrain.png"></img>
+                </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript " src="cc.js "></script>
+    <script type="text/javascript" src="cc.js"></script>
 
 </body>
 

@@ -4,18 +4,18 @@
 //         $('#' + $(this).val()).show();
 //     });
 // });
-$(document).ready(function () {
-    $("#displayTypeSelect").change(function () {
+$(document).ready(function() {
+    $("#displayTypeSelect").change(function() {
         $("img[class=imgLeft]").attr("src", "baseline/" + $("#eventSelect").val() + $("#displayTypeSelect").val() + ".gif");
     });
 });
-$(document).ready(function () {
-    $("#eventSelect").change(function () {
+$(document).ready(function() {
+    $("#eventSelect").change(function() {
         $("img[class=imgLeft]").attr("src", "baseline/" + $("#eventSelect").val() + $("#displayTypeSelect").val() + ".gif");
     });
 });
-$(document).ready(function () {
-    $("#eventSelect").change(function () {
+$(document).ready(function() {
+    $("#eventSelect").change(function() {
         $("img[class=imgRight]").attr("src", "baseline/" + $("#eventSelect").val() + "_totalrain.png");
     });
 });
