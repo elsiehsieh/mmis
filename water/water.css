@@ -66,6 +66,7 @@ body {
     font-family: "微軟正黑體" !important;
 }
 
+
 /**** NAV ****/
 
 nav.navbar-default {
@@ -99,6 +100,7 @@ nav.navbar-default .navbar-brand:hover {
     background-color: transparent;
 }
 
+
 /* navbar字體顏色 */
 
 nav.navbar-default .navbar-nav>li>a {
@@ -121,7 +123,9 @@ nav.navbar-default .navbar-nav li a.active:hover {
     background-color: transparent;
 }
 
+
 /**** NAV END ****/
+
 
 /**** HEADER ****/
 
@@ -136,8 +140,7 @@ header {
     flex-direction: row;
     justify-content: flex-end;
     z-index: 1;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0px 50px 80px;
     background: #83a4d4;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);
@@ -153,18 +156,19 @@ h4 {
     font-family: "微軟正黑體" !important;
 }
 
+
 /**** HEADER END ****/
 
 .sdw-div {
     white-space: wrap;
     display: inline;
-    margin-left: 60px;
+    margin-left: 80px;
 }
 
 .selectMenu {
     position: relative;
     display: inline-block;
-    margin: 50px 0 0;
+    margin: 50px 60px 0 0;
 }
 
 label[for="sdw"] {
