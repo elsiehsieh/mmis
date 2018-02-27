@@ -1,3 +1,7 @@
 .col-centered {
     text-align: center;
 }
+
+.pl-80 {
+    padding-left: 80px;
+}
