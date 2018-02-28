@@ -1,14 +1,16 @@
-.iconGroup {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.iconText {
-    padding-top: 5px;
-}
-
-.icon {
+.iconInPages img {
+    display: block;
     width: 80px;
     height: 80px;
     border-radius: 10%;
+    margin: 0 auto;
+}
+
+.iconInPages p {
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.iconInPages {
+    text-align: center;
 }

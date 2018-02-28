@@ -1,143 +1,4 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-html,
-body {
-    background: #F0F0F0;
-    color: #414141;
-    font-size: 16px;
-    overflow-x: hidden;
-    -webkit-text-stroke: rgba(255, 255, 255, 0.01) 0.1px;
-    -webkit-font-smoothing: antialiased !important;
-    min-width: 600px;
-}
-
-a {
-    text-decoration: none;
-    -ms-transition: all 0.3s ease-in;
-    -webkit-transition: all 0.3s ease-in;
-    transition: all 0.3s ease-in;
-}
-
-a:hover,
-a:focus,
-a:active {
-    outline: medium none;
-    text-decoration: none;
-}
-
-*:focus {
-    outline: none;
-}
-
-strong,
-b {
-    font-weight: 700;
-}
-
-i,
-em {
-    font-style: italic;
-}
-
-.clear {
-    border: 0;
-    clear: both;
-    height: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    font-weight: normal;
-    margin: 0;
-    font-family: "微軟正黑體" !important;
-}
-
-input,
-textarea {
-    -webkit-appearance: none;
-    border-radius: 0;
-}
-
-html,
-body {
-    height: 100%;
-    font-family: "微軟正黑體" !important;
-}
-
-/**** NAV ****/
-
-nav.navbar-default {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-color: rgba(0, 0, 0, 0.05);
-    -ms-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 200;
-}
-
-nav.navbar-default.affix {
-    background-color: #222;
-    -ms-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-
-nav.navbar-default .navbar-brand {
-    color: #fff;
-    font-size: 24px;
-    text-transform: uppercase;
-}
-
-nav.navbar-default .navbar-brand:focus,
-nav.navbar-default .navbar-brand:hover {
-    color: #fff !important;
-    background-color: transparent;
-}
-
-nav.navbar-default .navbar-nav>li>a {
-    color: #fff;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-nav.navbar-default .navbar-nav>li>a:focus,
-nav.navbar-default .navbar-nav>li>a:hover {
-    color: #F05F40;
-    background-color: transparent;
-}
-
-nav.navbar-default .navbar-nav li a.active,
-nav.navbar-default .navbar-nav li a.active:focus,
-nav.navbar-default .navbar-nav li a.active:hover {
-    color: #F05F40;
-    background-color: transparent;
-}
-
-/**** NAV END ****/
-
-/**** HEADER ****/
-
 header {
-    /* height: 200px; */
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    padding: 50px 0px 30px 0px;
     background: #ddd6f3;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #faaca8, #ddd6f3);
@@ -146,71 +7,29 @@ header {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-/**** HEADER END ****/
-
-.sdw-div {
-    white-space: nowrap;
-    display: inline;
-    margin-left: 40px;
+.img-display img {
+    max-width: 100%;
+    display: block;
 }
 
-.selectMenu {
-    position: relative;
-    display: inline-block;
-    margin: 50px 0 0;
-}
-
-label {
-    font-size: 20px;
-}
-
-.btn {
-    margin-bottom: 5px;
-    margin-left: 40px;
-}
-
-.imgLeft {
-    width: 100%;
-    min-width: 500px;
-}
-
-.imgRight {
-    width: 80%;
-    min-width: 450px;
-    margin-top: 58px;
-}
-
-.imgSection {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
+/* 
+div[class^="col"] {
+    border: 1px solid black;
+} */
 
 .text-bubble {
-    background-image: url("../image/text-bubble-600-220.png");
+    background-image: url("../image/text-bubble-500-215.png");
     background-repeat: no-repeat;
     width: 600px;
-    height: 228px;
-    padding: 60px 40px 90px 70px;
-    margin: 30 auto;
+    padding: 60px 120px 60px 70px;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
-@media screen and (max-width:995px) {
-    .imgRight {
-        width: 80%;
-        min-width: 500px;
-        /* margin-top: 58px;
-        margin-left: 120px; */
-        display: block;
-        margin: auto;
-    }
+.img-right img {
+    padding: 50px;
 }
 
-@media screen and (min-width:1800px) {
-    .imgRight {
-        width: 80%;
-        min-width: 500px;
-        margin-top: 90px;
-    }
+.form-control {
+    width: 220px;
 }

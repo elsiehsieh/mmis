@@ -6,7 +6,7 @@
 // });
 $(document).ready(function () {
     $("#selectDisplay").change(function () {
-        $("img").attr("src", "img/" + $("#selectDisplay").val() + ".png");
+        $("img.show").attr("src", "img/" + $("#selectDisplay").val() + ".png");
     });
 });
 

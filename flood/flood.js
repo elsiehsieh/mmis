@@ -1,21 +1,15 @@
-// $(function () {
-//     $('#colorselector').change(function () {
-//         $('.colors').hide();
-//         $('#' + $(this).val()).show();
-//     });
-// });
 $(document).ready(function () {
     $(".buttonMenu").hide();
-    $(".imgSection").hide();
+    $(".img-display").hide();
 
     $("#selectDisplay").change(function () {
         //控制影片/圖片div顯示隱藏
         if ($("#selectDisplay").val() == "flood") {
-            $('.videioSection').show();
-            $(".imgSection").hide();
+            $('.video-display').show();
+            $(".img-display").hide();
         } else {
-            $('.videioSection').hide();
-            $(".imgSection").show();
+            $('.video-display').hide();
+            $(".img-display").show();
         }
         //控制第二層按鈕表單顯示隱藏
         if ($("#selectDisplay").val() == "flood") {
@@ -25,9 +19,9 @@ $(document).ready(function () {
         }
         //換圖片
         if ($("#selectDisplay").val() == "maximum_depth") {
-            $("img").attr("src", "img/maximum_depth.png");
+            $("img.show").attr("src", "img/maximum_depth.png");
         } else {
-            $("img").attr("src", "img/loss.png");
+            $("img.show").attr("src", "img/loss.png");
         }
     });
 });

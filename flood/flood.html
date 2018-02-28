@@ -1,155 +1,191 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>淹水領域</title>
-    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MMIS Services</title>
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="flood.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="flood.js"></script>
+
 </head>
 
-<body data-spy="scroll" data-target="#myScrollspy">
-    <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="205">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">MMIS Services</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="../cc/cc.html">氣變情境說明</a>
-                    </li>
-                    <li>
-                        <a href="#">淹水領域</a>
-                    </li>
-                    <li>
-                        <a href="../slope/slope.html">坡災領域</a>
-                    </li>
-                    <li>
-                        <a href="../water/water.html">水資源領域</a>
-                    </li>
-                    <li>
-                        <a href="../ag/ag.html">農業領域</a>
-                    </li>
-                    <li>
-                        <a href="../dc/dc.html">公衛領域</a>
-                    </li>
-                    <li>
-                        <a href="#">跨部門領域</a>
-                    </li>
-                    <li>
-                        <a href="../index.html">
-                            <i class="material-icons">home</i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">MMIS Services</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../cc/cc.html">氣變情境說明
+
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">淹水領域</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../slope/slope.html">坡災領域</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../water/water.html">水資源領域</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../ag/ag.html">農業領域</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../dc/dc.html">公衛領域</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">跨部門領域</a>
+                </li>
+            </ul>
+
         </div>
     </nav>
-    <header>
+
+    <header class="py-30">
         <div class="container">
-            <div class="sdw-div" style="white-space:nowrap; display:inline">
-                <label for="sdw">流域</label>
-                <div class="selectMenu">
-                    <select class="selectpicker" id="selectWatershed" style="display:inline">
-                        <option selected="selected">曾文溪</option>
-                    </select>
+            <div class="row justify-content-center align-content-center">
+                <div class="col">
+                    <div class="select-group">
+                        <div class="form-group">
+                            <label for="sdw">流域</label>
+                            <select class="form-control" id="selectWatershed" style="display:inline">
+                                <option selected="selected">曾文溪</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="select-group">
+                        <div class="form-group">
+                            <label for="sdw">分析年份(基期/世紀末)</label>
+                            <select class="form-control" id="selectYear" style="display:inline">
+                                <option selected="selected" value="198202">198202</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="select-group">
+                        <div class="form-group">
+                            <label for="sdw">結果展示</label>
+                            <select class="form-control" id="selectDisplay" style="display:inline">
+                                <!-- <option disabled selected value> -- select an option -- </option> -->
+                                <option selected="selected" value="flood">淹水歷程</option>
+                                <option value="maximum_depth">最大淹水深</option>
+                                <option value="loss">損失評估</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-12 col-xs-12">
+                    <div class="iconInPages pt-2">
+                        <img src="../image/icon/淹水.JPG" alt="">
+                        <p>淹水領域</p>
+                    </div>
                 </div>
             </div>
-            <div class="sdw-div" style="white-space:nowrap; display:inline">
-                <label for="sdw">分析年份(基期/世紀末)</label>
-                <div class="selectMenu">
-                    <select class="selectpicker" id="selectYear" style="display:inline">
-                        <option selected="selected" value="198202">198202</option>
-                    </select>
-                </div>
-            </div>
-            <div class="sdw-div" style="white-space:nowrap; display:inline">
-                <label for="sdw">結果展示</label>
-                <div class="selectMenu">
-                    <select class="selectpicker" id="selectDisplay" style="display:inline">
-                        <!-- <option disabled selected value> -- select an option -- </option> -->
-                        <option selected="selected" value="flood">淹水歷程</option>
-                        <option value="maximum_depth">最大淹水深</option>
-                        <option value="loss">損失評估</option>
-                    </select>
-                </div>
-            </div>
+
             <div class="buttonMenu">
                 <hr class="style14">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="sdw-div" style="white-space:nowrap; display:inline">
+                        <div class="sdw-div" style="white-space:nowrap;">
                             <label for="sdw">調適選項</label>
-                            <button class="btn btn-default" type="button">none</button>
-                        </div>
-
-                        <div class="sdw-div" style="white-space:nowrap; display:inline">
-                            <label for="sdw">災害潛勢</label>
-                            <button class="btn btn-default" type="button">rising dike</button>
-                            <button class="btn btn-default" type="button">more pump</button>
-                            <button class="btn btn-default" type="button">larger detention area</button>
+                            <button class="btn btn-outline-dark" type="button">none</button>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="sdw-div" style="white-space:nowrap; display:inline">
                             <label for="sdw">暴露量</label>
-                            <button class="btn btn-default" type="button">疏散</button>
-                            <button class="btn btn-default" type="button">土地利用調整</button>
+                            <button class="btn btn-outline-dark" type="button">疏散</button>
+                            <button class="btn btn-outline-dark" type="button">土地利用調整</button>
                         </div>
-
+                    </div>
+                    <div class="col-md-6">
+                        <div class="sdw-div" style="white-space:nowrap; display:inline">
+                            <label for="sdw">災害潛勢</label>
+                            <button class="btn btn-outline-dark" type="button">rising dike</button>
+                            <button class="btn btn-outline-dark" type="button">more pump</button>
+                            <button class="btn btn-outline-dark" type="button">larger detention area</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
                         <div class="sdw-div" style="white-space:nowrap; display:inline">
                             <label for="sdw">脆弱度</label>
-                            <button class="btn btn-default" type="button">演練</button>
-                            <button class="btn btn-default" type="button">防救災</button>
-                            <button class="btn btn-default" type="button">備災行為</button>
+                            <button class="btn btn-outline-dark" type="button">演練</button>
+                            <button class="btn btn-outline-dark" type="button">防救災</button>
+                            <button class="btn btn-outline-dark" type="button">備災行為</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <section>
+        <div class="text-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card border-secondary my-2" style="max-width: 50rem;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-
-    <div class="imgSection">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="col-center">
-                    <img src="img/maximum_depth.png"></img>
+        <div class="img-display">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img class="show" src="img/maximum_depth.png"></img>
+                    </div>
                 </div>
             </div>
-
         </div>
-    </div>
-    <div class="videioSection">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="col-center">
-                    <video width="80%" controls autoplay loop>
-                        <source src="img/flood.mp4" type="video/mp4">
-                    </video>
+        <div class="video-display">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="video">
+                            <video width="80%" controls autoplay loop>
+                                <source src="img/flood.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col p-3">
 
                 </div>
             </div>
-
         </div>
-    </div>
-    <script type="text/javascript" src="flood.js"></script>
+    </footer>
+
 
 </body>
 
