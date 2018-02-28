@@ -1,0 +1,206 @@
+@charset "UTF-8";
+html,
+body {
+    font-family: "微軟正黑體";
+    height: 100%;
+    width: 100%;
+}
+
+.image {
+    background: url(http://ncdrmmis.azurewebsites.net/image/home_bg.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    margin-top: 0px;
+    width: 100%;
+    /* background: rgba(0, 0, 0, 0.5); */
+}
+
+.heading {
+    font-weight: bold;
+    color: #191970;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 4px;
+    position: absolute;
+    top: 38%;
+    width: 100%;
+    margin: 0 auto;
+    font-family: Helvetica;
+}
+
+.menuLi {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.image ul {
+    text-align: center;
+    padding: 10px 60px;
+    position: absolute;
+    top: 65%;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    /*background-color: rgba(35, 62, 71, 0.9);*/
+    background: #536976;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #292E49, #536976);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #292E49, #536976);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.image ul .btn {
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.image ul .btn:hover {
+    color: white;
+    border-color: white;
+}
+
+.image ul .btn>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+}
+
+.image ul li {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.image ul li .iconText {
+    color: white;
+}
+
+.navbar {
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    color: #000099;
+    z-index: 100;
+    -webkit-transition: background-color 1s ease 0s;
+    transition: background-color 1s ease 0s;
+}
+
+.navbar-default .navbar-brand {
+    margin-top: 10px;
+    color: steelblue;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: white;
+    border: 1px solid white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+    margin: 10px 5px 5px 5px;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:active,
+.navbar-default .navbar-nav>li>a:focus {
+    color: white;
+    border: 1px solid white;
+}
+
+.navbar-default .navbar-nav>li>a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    background-color: transparent;
+    color: white;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #ffffff;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    color: white;
+    background-color: #ffffff;
+}
+
+.navbar-default .navbar-collapse.collapse.in ul {
+    background-color: #000000;
+}
+
+/* Solid class attached on scroll past first section */
+
+.navbar.solid {
+    background-color: #000000;
+    -webkit-transition: background-color 1s ease 0s;
+    transition: background-color 1s ease 0s;
+    -webkit-box-shadow: 0 0 4px grey;
+    box-shadow: 0 0 4px grey;
+}
+
+.navbar.solid .navbar-brand {
+    color: #c57ed3;
+    -webkit-transition: color 1s ease 0s;
+    transition: color 1s ease 0s;
+}
+
+.navbar.solid .navbar-nav>li>a {
+    color: #ffffff;
+    -webkit-transition: color 1s ease 0s;
+    transition: color 1s ease 0s;
+}
+
+.about {
+    background-color: rgb(223, 223, 223);
+    color: #5c5c5c;
+    height: 100%;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.about h2 {
+    padding-top: 220px;
+}
+
+.about p {
+    padding: 20px 80px;
+}
+
+@media only screen and (min-width: 1300px) {
+    .image ul .btn>img {
+        width: 80px;
+        height: 80px;
+        border-radius: 10%;
+    }
+    .iconText {
+        font-size: 20px;
+    }
+    .menuLi {
+        width: 1000px;
+        margin: 0 auto;
+    }
+    .image .heading {
+        color: #191970;
+        font-weight: bold;
+        text-align: center;
+        font-size: 56px;
+        letter-spacing: 4px;
+        position: absolute;
+        top: 38%;
+        width: 100%;
+        margin: 0 auto;
+        font-family: Helvetica;
+    }
+}
