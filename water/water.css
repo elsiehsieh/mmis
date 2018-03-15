@@ -7,10 +7,26 @@ header {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.img-display img {
-    max-width: 100%;
+.show.left {
+    width: 100%;
 }
 
-/* div[class^="col"] {
+.show.right {
+    width: 110%;
+}
+
+.iconInPages {
+    margin-top: 20px;
+}
+
+.img-display {
+    margin-top: 20px;
+}
+
+div[class^="col"] {
     border: 1px solid black;
-} */
+}
+
+.border-info {
+    max-width: 60rem;
+}

@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MMIS Services</title>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="water.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="water.css">
@@ -21,8 +18,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">MMIS Services</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -65,41 +61,60 @@
     <header class="py-30">
         <div class="container">
             <div class="row justify-content-center align-content-center">
-                <div class="col">
-                    <div class="select-group">
-                        <div class="form-group">
-                            <label for="select-year">用水分析目標年度</label>
-                            <select class="form-control" id="selectYear">
-                                <option selected="selected" value="Year120">民國120年</option>
-                                <option value="Year115">民國115年</option>
+                <div class="col-10">
+                    <div class="row justify-content-center align-content-center">
+                        <div class="col-sm-6 col-xs-12 col-md-3">
+                            <div class="select-group">
+                                <div class="form-group">
+                                    <label for="selectDisplay">氣候情境</label>
+                                    <select class="form-control" id="selectScenario">
+                                <option selected value="none"> -- select an option -- </option>
+                                <option value="statistical_downscaling">統計降尺度</option>
                             </select>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="select-group">
-                        <div class="form-group">
-                            <label for="selectDisplay">結果展示</label>
-                            <select class="form-control" id="selectDisplay">
-                                <option selected="selected" value="future_rain">未來降雨變化</option>
-                                <option value="public_water">公共用水</option>
+                        <div class="col-sm-6 col-xs-12 col-md-3">
+                            <div class="select-group">
+                                <div class="form-group">
+                                    <label for="select-year">用水分析目標年度</label>
+                                    <select class="form-control" id="selectYear" disabled>
+                                <option selected="selected" value="base">基期(1986~2005)</option>
+                                <option value="near_future">近未來(2016~2035)</option>
+                            </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 col-md-3">
+                            <div class="select-group">
+                                <div class="form-group">
+                                    <label for="selectDisplay">主題成果</label>
+                                    <select class="form-control" id="selectDisplay" disabled>
+                                <option selected="selected" value="public_water">公共用水</option>
                                 <option value="ag_water">農業用水</option>
                             </select>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="select-group">
-                        <div class="form-group">
-                            <label for="sdw">灌區選擇</label>
-                            <select class="form-control" id="selectLocation">
-                                <option selected="selected" value="">桃園灌區</option>
-                                <option value="">石門灌區</option>
+                        <div class="col-sm-6 col-xs-12 col-md-3">
+                            <div class="select-group">
+                                <div class="form-group">
+                                    <label for="sdw">區域</label>
+                                    <select class="form-control" id="selectLocation" disabled>
+                                <option selected="selected" value="public_taipei-banshin-taoyuan">臺北、板新、桃園</option>
+                                <option value="public_taipei">臺北</option>
+                                <option value="public_banshin">板新</option>
+                                <option value="public_taoyuan">桃園</option>
+                                <option value="ag_shimen">石門灌區</option>
+                                <option value="ag_taoyuan">桃園灌區</option>
                             </select>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-12 col-xs-12">
+                <div class="col-2">
                     <div class="iconInPages pt-2">
                         <img src="../image/icon/water.jpg" alt="">
                         <p>水資源領域</p>
@@ -110,21 +125,42 @@
     </header>
     <section>
         <div class="img-display">
-            <div class="container">
+            <div class="default container">
+                <div class="row">
+                    <div class="col-md-7 col-sm-12">
+                        <img class="show left" src="./img/default-left.png">
+                    </div>
+                    <div class="col-md-5 col-sm-12">
+                        <img class="show right" src="./img/default-right.png">
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col">
-                        <img class="show" src="./img/future_rain.png">
-                    </div>
-                    <div class="col-3 col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                        <div class="card border-info my-5" style="max-width: 20rem;">
-                            <div class="card-header">Header</div>
+                        <div class="card border-info my-5">
                             <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text">臺北、板新與桃園地區未來在板新二期的水資源調度規劃下，皆能達到供需平衡的永續發展狀態，如圖1顯示近未來規劃的供水能力皆能滿足需水計畫。然而氣候變遷是否會影響原本規畫，以及如何影響，仍是政府單位與利害關係人共同關心的議題。本研究使用TCCIP統計降尺度資料，透過氣象合成模式產生基期與近未來的氣溫與降雨日資料，代入水文模式與水資源系統動力模式進行乾旱與水資源風險評估，研究架構如圖2所示。
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="statistical container" style="display:none">
+                <div class="row">
+                    <div class="col-md-9 col-sm-12">
+                        <img class="show left" src="./img/base_left.png">
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <div class="card border-info my-5">
+                            <div class="card-body">
+                                <p class="card-text">現況臺北缺水率為0，板新與桃園地區在枯水期有些微缺水，但均在容許範圍。 臺北SI缺水指數設計標準為0.1，板新與桃園設計標準為0.5，結果顯示均在設計範圍內。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </section>
     <footer>
