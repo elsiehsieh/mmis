@@ -1,102 +1,199 @@
 $(document).ready(function() {
-    $("#selectScenario").change(function() {
-        if ($(this).val() == "statistical_downscaling") {
-            $('#selectYear').attr('disabled', false);
-            $('#selectDisplay').attr('disabled', true);
-            $('#selectLocation').attr('disabled', true);
-            // $("img.show").attr("src", "img/" + $("#selectDisplay").val() + ".png");
+
+    var selectYearOptions = "";
+    var selectDisplayOptions = "";
+    var selectLocationOptions = "";
+
+    $("#selectScenario").on("change", function() {
+        console.log("選擇情境");
+        var value = $(this).val();
+        if (value == "statistical_downscaling") {
+            selectYearOptions =
+                "<option>請選擇</option>" +
+                "<option value='base'>基期(1986~2005)</option>" +
+                "<option value='near_future'>近未來(2016~2035)</option>";
+            $("#selectYear").html(selectYearOptions);
+            //選擇統計降尺度，隱藏default container
             $(".statistical.container").css("display", "block");
             $(".default.container").css("display", "none");
+
         } else {
-            $('#selectYear').attr('disabled', true);
-            $('#selectDisplay').attr('disabled', false);
-            $('#selectLocation').attr('disabled', false);
             $(".statistical.container").css("display", "none");
             $(".default.container").css("display", "block");
+
+            $("#selectYear")
+                .find("option")
+                .remove();
+            $("#selectDisplay")
+                .find("option")
+                .remove();
+            $("#selectLocation")
+                .find("option")
+                .remove();
         }
     });
 
-
-
-    $("#selectYear").change(function() {
-
-        if ($(this).val() == "near_future") {
-            $('#selectDisplay').attr('disabled', false);
-            $('#selectLocation').attr('disabled', false);
-            console.log($("#selectLocation").val());
-            $("#selectLocation").find('option:selected').removeAttr("selected");
-            // $('select[id*="selectDisplay"] option[value="public_water"]').attr('selected', true);
-            $('select[id*="selectLocation"] option[value="public_taipei"]').attr('selected', true);
-            $('select[id*="selectLocation"] option[value^="public"]').show();
-            $('select[id*="selectLocation"] option[value="public_taipei-banshin-taoyuan"]').hide();
-            $('select[id*="selectLocation"] option[value*="ag"]').hide();
-            $(".statistical.container .show.left").attr("src", "img/near_future_" + $('#selectLocation').val() + ".png");
-            $('.statistical.container .card-text').text(text['text_' + $('#selectLocation').val()]);
-            $("#selectLocation").change(function() {
-                $(".statistical.container .show.left").attr("src", "img/near_future_" + $('#selectLocation').val() + ".png");
-                if ($("#selectLocation").val() == "public_banshin") {
-                    $('.statistical.container .card-text').text(text.text_public_banshin);
-                } else if ($("#selectLocation").val() == "public_taoyuan") {
-                    $('.statistical.container .card-text').text(text.text_public_taoyuan);
-                } else {
-                    $('.statistical.container .card-text').text(text.text_public_taipei);
-                }
-            });
-            $("#selectDisplay").change(function() {
-                if ($(this).val() == "public_water") {
-                    //公共用水
-
-                    console.log($("#selectLocation").val());
-                    // $("#selectLocation").find('option:selected').removeAttr("selected");
-                    // $('select[id*="selectLocation"] option[value="public_taipei"]').attr('selected', true);
-                    $('select[id*="selectLocation"] option[value^="public"]').show();
-                    $('select[id*="selectLocation"] option[value="public_taipei-banshin-taoyuan"]').hide();
-                    $('select[id*="selectLocation"] option[value*="ag"]').hide();
-
-                    $(".statistical.container .show.left").attr("src", "img/near_future_" + $("#selectLocation option:selected").val() + ".png ");
-                    $('.statistical.container .card-text').text(text['text_' + $('#selectLocation').val()]);
-                    $("#selectLocation").change(function() {
-                        $(".statistical.container .show.left").attr("src", "img/near_future_" + $('#selectLocation').val() + ".png");
-                        if ($("#selectLocation").val() == "public_banshin") {
-                            $('.statistical.container .card-text').text(text.text_public_banshin);
-                        } else if ($("#selectLocation").val() == "public_taoyuan") {
-                            $('.statistical.container .card-text').text(text.text_public_taoyuan);
-                        } else {
-                            $('.statistical.container .card-text').text(text.text_public_taipei);
-                        }
-                    });
-                } else {
-                    //農業用水
-                    console.log($("#selectLocation").val())
-                    $("#selectLocation").find('option:selected').removeAttr("selected");
-                    $('select[id*="selectLocation"] option[value^="public"]').hide();
-                    $('select[id*="selectLocation"] option[value*="ag"]').show();
-                    $('select[id*="selectLocation"] option[value="ag_shimen"]').attr('selected', true);
-                    $(".statistical.container .show.left").attr("src", "img/ag_shimen.png");
-                    $('.statistical.container .card-text').text(text['text_' + $('#selectLocation').val()]);
-                    $("#selectLocation").change(function() {
-                        $(".statistical.container .show.left").attr("src", "img/" + $('#selectLocation').val() + ".png");
-                        if ($("#selectLocation").val() == "ag_shimen") {
-                            $('.statistical.container .card-text').text(text.text_ag_shimen);
-                        } else {
-                            $('.statistical.container .card-text').text(text.text_ag_taoyuan);
-                        }
-                    });
-                }
-            });
-
-        } else {
-            $('select[id*="selectDisplay"] option[value="public_water"]').attr('selected', true);
-            $('select[id*="selectLocation"] option[value="public_taipei"]').attr('selected', true);
-            $('select[id*="selectLocation"] option[value="public_taipei-banshin-taoyuan"]').show();
-            $('select[id*="selectLocation"] option[value*="ag"]').show();
-            $('#selectDisplay').attr('disabled', true);
-            $('#selectLocation').attr('disabled', true);
+    $("#selectYear").on("change", function() {
+        var value = $(this).val();
+        if (value == "base") {
+            selectDisplayOptions =
+                "<option selected='selected' value='public_water'>公共用水</option>";
+            $("#selectDisplay").html(selectDisplayOptions);
+            selectLocationOptions =
+                "<option selected='selected' value='public_taipei-banshin-taoyuan'>臺北、板新、桃園</option>";
+            $("#selectLocation").html(selectLocationOptions);
+            //呈現基期圖&文
             $(".statistical.container .show.left").attr("src", "img/base_left.png");
             $('.statistical.container .card-text').text(text.text_base);
+        } else if (value == "near_future") {
+            $("#selectLocation")
+                .find("option")
+                .remove();
+            selectDisplayOptions =
+                "<option>選擇主題成果</option>" +
+                "<option value='public_water'>公共用水</option>" +
+                "<option value='ag_water'>農業用水</option>";
+            $("#selectDisplay").html(selectDisplayOptions);
+        } else {
+            $("#selectDisplay")
+                .find("option")
+                .remove();
+            $("#selectLocation")
+                .find("option")
+                .remove();
         }
     });
+
+    $("#selectDisplay").on("change", function() {
+        var value = $(this).val();
+        if (value == "public_water") {
+            selectLocationOptions =
+                "<option>選擇區域</option>" +
+                "<option value='public_taipei'>臺北</option>" +
+                "<option value='public_banshin'>板新</option>" +
+                "<option value='public_taoyuan'>桃園</option>";
+            $("#selectLocation").html(selectLocationOptions);
+        } else if (value == "ag_water") {
+            selectLocationOptions =
+                "<option>選擇區域</option>" +
+                "<option value='ag_shimen'>石門灌區</option>" +
+                "<option value='ag_taoyuan'>桃園灌區</option>";
+            $("#selectLocation").html(selectLocationOptions);
+        } else {
+            $("#selectLocation")
+                .find("option")
+                .remove();
+        }
+    });
+
+    $("#selectLocation").on("change", function() {
+        var value = $(this).val();
+
+        $(".statistical.container .show.left").attr("src", "img/" + value + ".png");
+        $('.statistical.container .card-text').text(text['text_' + value]);
+
+    });
+
 });
+// $(document).ready(function() {
+//     $("#selectScenario").change(function() {
+//         if ($(this).val() == "statistical_downscaling") {
+//             $('#selectYear').attr('disabled', false);
+//             $('#selectDisplay').attr('disabled', true);
+//             $('#selectLocation').attr('disabled', true);
+//             // $("img.show").attr("src", "img/" + $("#selectDisplay").val() + ".png");
+//             $(".statistical.container").css("display", "block");
+//             $(".default.container").css("display", "none");
+//         } else {
+//             $('#selectYear').attr('disabled', true);
+//             $('#selectDisplay').attr('disabled', false);
+//             $('#selectLocation').attr('disabled', false);
+//             $(".statistical.container").css("display", "none");
+//             $(".default.container").css("display", "block");
+//         }
+//     });
+
+
+
+//     $("#selectYear").change(function() {
+
+//         if ($(this).val() == "near_future") {
+//             $('#selectDisplay').attr('disabled', false);
+//             $('#selectLocation').attr('disabled', false);
+//             console.log($("#selectLocation").val());
+//             $("#selectLocation").find('option:selected').removeAttr("selected");
+//             // $('select[id*="selectDisplay"] option[value="public_water"]').attr('selected', true);
+//             $('select[id*="selectLocation"] option[value="public_taipei"]').attr('selected', true);
+//             $('select[id*="selectLocation"] option[value^="public"]').show();
+//             $('select[id*="selectLocation"] option[value="public_taipei-banshin-taoyuan"]').hide();
+//             $('select[id*="selectLocation"] option[value*="ag"]').hide();
+//             $(".statistical.container .show.left").attr("src", "img/near_future_" + $('#selectLocation').val() + ".png");
+//             $('.statistical.container .card-text').text(text['text_' + $('#selectLocation').val()]);
+//             $("#selectLocation").change(function() {
+//                 $(".statistical.container .show.left").attr("src", "img/near_future_" + $('#selectLocation').val() + ".png");
+//                 if ($("#selectLocation").val() == "public_banshin") {
+//                     $('.statistical.container .card-text').text(text.text_public_banshin);
+//                 } else if ($("#selectLocation").val() == "public_taoyuan") {
+//                     $('.statistical.container .card-text').text(text.text_public_taoyuan);
+//                 } else {
+//                     $('.statistical.container .card-text').text(text.text_public_taipei);
+//                 }
+//             });
+//             $("#selectDisplay").change(function() {
+//                 if ($(this).val() == "public_water") {
+//                     //公共用水
+
+//                     console.log($("#selectLocation").val());
+//                     // $("#selectLocation").find('option:selected').removeAttr("selected");
+//                     // $('select[id*="selectLocation"] option[value="public_taipei"]').attr('selected', true);
+//                     $('select[id*="selectLocation"] option[value^="public"]').show();
+//                     $('select[id*="selectLocation"] option[value="public_taipei-banshin-taoyuan"]').hide();
+//                     $('select[id*="selectLocation"] option[value*="ag"]').hide();
+
+//                     $(".statistical.container .show.left").attr("src", "img/near_future_" + $("#selectLocation option:selected").val() + ".png ");
+//                     $('.statistical.container .card-text').text(text['text_' + $('#selectLocation').val()]);
+//                     $("#selectLocation").change(function() {
+//                         $(".statistical.container .show.left").attr("src", "img/near_future_" + $('#selectLocation').val() + ".png");
+//                         if ($("#selectLocation").val() == "public_banshin") {
+//                             $('.statistical.container .card-text').text(text.text_public_banshin);
+//                         } else if ($("#selectLocation").val() == "public_taoyuan") {
+//                             $('.statistical.container .card-text').text(text.text_public_taoyuan);
+//                         } else {
+//                             $('.statistical.container .card-text').text(text.text_public_taipei);
+//                         }
+//                     });
+//                 } else {
+//                     //農業用水
+//                     console.log($("#selectLocation").val())
+//                     $("#selectLocation").find('option:selected').removeAttr("selected");
+//                     $('select[id*="selectLocation"] option[value^="public"]').hide();
+//                     $('select[id*="selectLocation"] option[value*="ag"]').show();
+//                     $('select[id*="selectLocation"] option[value="ag_shimen"]').attr('selected', true);
+//                     $(".statistical.container .show.left").attr("src", "img/ag_shimen.png");
+//                     $('.statistical.container .card-text').text(text['text_' + $('#selectLocation').val()]);
+//                     $("#selectLocation").change(function() {
+//                         $(".statistical.container .show.left").attr("src", "img/" + $('#selectLocation').val() + ".png");
+//                         if ($("#selectLocation").val() == "ag_shimen") {
+//                             $('.statistical.container .card-text').text(text.text_ag_shimen);
+//                         } else {
+//                             $('.statistical.container .card-text').text(text.text_ag_taoyuan);
+//                         }
+//                     });
+//                 }
+//             });
+
+//         } else {
+//             $('select[id*="selectDisplay"] option[value="public_water"]').attr('selected', true);
+//             $('select[id*="selectLocation"] option[value="public_taipei"]').attr('selected', true);
+//             $('select[id*="selectLocation"] option[value="public_taipei-banshin-taoyuan"]').show();
+//             $('select[id*="selectLocation"] option[value*="ag"]').show();
+//             $('#selectDisplay').attr('disabled', true);
+//             $('#selectLocation').attr('disabled', true);
+//             $(".statistical.container .show.left").attr("src", "img/base_left.png");
+//             $('.statistical.container .card-text').text(text.text_base);
+//         }
+//     });
+// });
 
 var text = {
     text_public_taipei: "臺北地區近未來氣候變遷不影響供水。",
