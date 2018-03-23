@@ -1,5 +1,7 @@
 $(document).ready(function() {
     $(".card-bottom").hide();
+    $(".img-show-12").hide();
+
     var selectYearOptions = "";
     var selectDisplayOptions = "";
     var selectLocationOptions = "";

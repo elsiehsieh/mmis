@@ -25,3 +25,13 @@
 .home-icon-in-pages:hover {
     color: white;
 }
+
+@media screen and (max-width:450px) {
+    .iconInPages img {
+        width: 40px;
+        height: 40px;
+    }
+    .iconInPages p {
+        font-size: 18px;
+    }
+}
