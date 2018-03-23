@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    $(".card-bottom").hide();
     var selectYearOptions = "";
     var selectDisplayOptions = "";
     var selectLocationOptions = "";
@@ -73,7 +73,7 @@ $(document).ready(function() {
             $("#selectLocation").html(selectLocationOptions);
         } else if (value == "ag_water") {
             selectLocationOptions =
-                "<option>選擇區域</option>" +
+                "<option value='ag_none'>選擇區域</option>" +
                 "<option value='ag_shimen'>石門灌區</option>" +
                 "<option value='ag_taoyuan'>桃園灌區</option>";
             $("#selectLocation").html(selectLocationOptions);
@@ -86,8 +86,30 @@ $(document).ready(function() {
 
     $("#selectLocation").on("change", function() {
         var value = $(this).val();
-        $(".statistical.container .show.left").attr("src", "img/" + value + ".png");
-        $('.statistical.container .card-text').text(text['text_' + value]);
+
+        if (value == "public_taipei" || value == "public_banshin" || value == "public_taoyuan") {
+            $(".statistical.container .show.left").attr("src", "img/" + value + ".png");
+            $('.statistical.container .card-text').text(text['text_' + value]);
+        }
+
+        if (value == "ag_shimen" || value == "ag_taoyuan") {
+            $(".card-right").hide();
+            $(".card-bottom").show();
+            $(".img-show-9").hide();
+            $(".img-show-12").show();
+            $(".statistical.container .show.left").attr("src", "img/" + value + ".png");
+            $('.statistical.container .card-text').text(text['text_' + value]);
+        } else if (value == "ag_none") {
+            $(".card-right").hide();
+            $(".card-bottom").show();
+            $(".img-show-9").hide();
+            $(".img-show-12").show();
+        } else {
+            $(".card-right").show();
+            $(".card-bottom").hide();
+            $(".img-show-9").show();
+            $(".img-show-12").hide();
+        }
     });
 
 });
