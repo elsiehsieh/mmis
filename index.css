@@ -5,11 +5,7 @@
         width: 100%;
     }
     
-    .titleStyle {
-        font-family: "微軟正黑體" !important;
-    }
-    
-    .image {
+    .home-image {
         background: url(http://ncdrmmis.azurewebsites.net/image/home_bg.jpg) no-repeat center center;
         background-size: cover;
         height: 100%;
@@ -18,7 +14,7 @@
         /* background: rgba(0, 0, 0, 0.5); */
     }
     
-    .heading {
+    .title {
         font-weight: bold;
         color: #191970;
         text-align: center;
@@ -28,7 +24,7 @@
         top: 38%;
         width: 100%;
         margin: 0 auto;
-        font-family: Helvetica;
+        font-family: "微軟正黑體" !important;
     }
     
     .menuLi {
@@ -36,43 +32,38 @@
         margin: 0 auto;
     }
     
-    .image ul {
+    .home-image ul {
         text-align: center;
         padding: 10px 60px;
         position: absolute;
         top: 65%;
-        /* background-color: rgba(0, 0, 0, 0.7); */
-        /*background-color: rgba(35, 62, 71, 0.9);*/
         background: #536976;
-        /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #292E49, #536976);
-        /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #292E49, #536976);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
     
-    .image ul .btn {
+    .home-image ul .btn {
         background-color: transparent;
         color: white;
         padding: 10px;
         font-size: 1.2em;
-        /* border-radius: 8px; */
         transition: transform 0.4s;
         outline: none;
     }
     
-    .image ul .btn:hover {
+    .home-image ul .btn:hover {
         color: white;
-        -webkit-transform: scale(1.2, 1.2); // This is the enlarged size scale of the image.
+        -webkit-transform: scale(1.2, 1.2);
+        /*  This is the enlarged size scale of the image. */
     }
     
-    .image ul .btn>img {
+    .home-image ul .btn>img {
         width: 50px;
         height: 50px;
         border-radius: 10%;
     }
     
-    .image ul li {
+    .home-image ul li {
         display: inline-block;
         vertical-align: middle;
         position: relative;
@@ -80,12 +71,13 @@
         margin-right: 10px;
     }
     
-    .image ul li .iconText {
+    .home-image ul li .iconText {
         color: white;
     }
+    /* 大螢幕 */
     
     @media only screen and (min-width: 1300px) {
-        .image ul .btn>img {
+        .home-image ul .btn>img {
             width: 80px;
             height: 80px;
             border-radius: 10%;
@@ -97,7 +89,7 @@
             width: 1000px;
             margin: 0 auto;
         }
-        .image .heading {
+        .home-image .title {
             color: #191970;
             font-weight: bold;
             text-align: center;
@@ -110,13 +102,14 @@
             font-family: Helvetica;
         }
     }
+    /* 手機螢幕 */
     
     @media screen and (max-width:450px) {
-        .heading {
+        .title {
             font-size: 38px;
             top: 28%;
         }
-        .image ul {
+        .home-image ul {
             top: 60%;
         }
     }

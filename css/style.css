@@ -8,6 +8,10 @@
 @import url("nav.css");
 @import url("icon-in-pages.css");
 @import url("select-menu.css");
+* {
+    transition: all 0.5s ease;
+}
+
 html,
 body {
     font-family: "微軟正黑體";
